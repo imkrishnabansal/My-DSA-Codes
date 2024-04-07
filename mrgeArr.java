@@ -1,31 +1,40 @@
+// Java program to merge two sorted arrays/
 import java.util.*;
+
 public class mrgeArr {
+    // Driver code
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int s = sc.nextInt();
-        int union = 0;
-        int arr1[] = new int[n];
-        int arr2[] = new int[n];
-        for(int i =0;i<n;i++) {
-            arr1[i] = sc.nextInt();
-        }
-        for(int j = 0;j<m;j++) {
-            arr2[j] = sc.nextInt();
-        }
-        for(int i = 0;i<arr1.length;i++){
-            for(int j = 0;j<arr2.length;j++){
-            if(arr1[i]>arr2[j]) {
-               i++;
-            }
-            else{
-                j++;
-            }
-            }
-            int arr3[] = new int[s];
+        int arr1[] = {1, 3, 5, 7};
+        int n1 = arr1.length;
 
+        int arr2[] = {2, 4, 6, 8};
+        int n2 = arr2.length;
+
+        int arr3[] = new int[n1 + n2];
+        mergeArrays(arr1, arr2, n1, n2, arr3);
+
+        System.out.println("Array after merging");
+        for (int i=0; i < n1+n2; i++)
+            System.out.print(arr3[i] + " ");
+
+    }
+
+    public static void mergeArrays(int[] arr1, int[] arr2, int n1, int n2, int[] arr3){
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        // traverse the arr1 and insert its element in arr3
+        while(i < n1){
+            arr3[k++] = arr1[i++];
         }
 
-          }
-      }
+        // now traverse arr2 and insert in arr3
+        while(j < n2){
+            arr3[k++] = arr2[j++];
+        }
+
+        // sort the whole array arr3
+        Arrays.sort(arr3);
+    }
+}

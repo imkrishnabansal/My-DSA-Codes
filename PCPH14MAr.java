@@ -23,7 +23,6 @@ public class PCPH14MAr {
         boolean hasDigit = false;
         boolean hasSpecialCharacter = false;
         String sc = "!.?_,";
-
         for (char ch : password.toCharArray()) {
             if (Character.isUpperCase(ch)) {
                 hasUpperCase = true;
