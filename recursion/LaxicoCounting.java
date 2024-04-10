@@ -16,7 +16,7 @@ public class LaxicoCounting {
         if(curr==0){
             i= 1;
         }
-        for(;i<=n;i++){
+        for(;i<=9;i++){
             Lc(n,curr*10+i);
         }
     }
