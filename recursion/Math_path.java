@@ -11,7 +11,7 @@ public class Math_path {
         System.out.println(totalCount);
     }
 
-    static int countAndPrintPath(int cc, int cr, int ec, int er, String ans) {
+    static int countAndPrintPath(int    cc, int cr, int ec, int er, String ans) {
         if (cc == ec && cr == er) {
             System.out.print(ans+" "); // Print the path
             return 1; // Return 1 since we found a valid path

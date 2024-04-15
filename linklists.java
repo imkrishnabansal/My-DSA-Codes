@@ -1,61 +1,60 @@
-//public class linklists {
-//    Node head;
-//
-//    class Node {
-//        int data;
-//        Node next;
-//
-//        Node(int d) {
-//            data = d;
-//            next = null;
-//
-//        }
-//    }
-//
-//    void addFirst(int d) {
+public class linklists {
+    Node head;
+
+    class Node {
+        int data;
+        Node next;
+
+        Node(int d) {
+            data = d;
+            next = null;
+
+        }
+    }
+
+    void addFirst(int d) {
+        Node newnode = new Node(d);
+        if (head == null) {
+            head = newnode;
+            return;
+        }
+        newnode.next = head;
+        head = newnode;
+    }
+
+    //    void addLast(int d) {
 //        Node newnode = new Node(d);
 //        if (head == null) {
 //            head = newnode;
 //            return;
 //        }
-//        newnode.next = head;
-//        head = newnode;
+//        Node last = head;
+//        while (last.next != null) {
+//            last = last.next;
+//        }
+//        last.next = newnode;
 //    }
-//
-//    //    void addLast(int d) {
-////        Node newnode = new Node(d);
-////        if (head == null) {
-////            head = newnode;
-////            return;
-////        }
-////        Node last = head;
-////        while (last.next != null) {
-////            last = last.next;
-////        }
-////        last.next = newnode;
-////    }
-////    void delFirst(int d){
-////        Node newnode = new Node(d);
-////        if(head==null){
-////            head = newnode;
-////            return;
-////        }
-////      head = head.next;
-////        }
-////        void delLast(int d) {
-////            Node newnode = new Node(d);
-////            if (head == null) {
-////                head = newnode;
-////                return;
-////            }
-////            Node last = head;
-////            Node prev = head;
-////            while (last.next != null) {
-////                prev = last;
-////                last = last.next;
-////            }
-////            prev.next = null;
-////        }
+//    void delFirst(int d){
+//        Node newnode = new Node(d);
+//        if(head==null){
+//            head = newnode;
+//            return;
+//        }
+//      head = head.next;
+//        }
+        void delLast() {
+
+            if (head == null) {
+                return;
+            }
+            Node last = head;
+            Node prev = head;
+            while (last.next != null) {
+                prev = last;
+                last = last.next;
+            }
+            prev.next = null;
+        }
 //    void delAtpos(int pos) {
 //        if (head == null) {
 //            System.out.println("List is empty");
@@ -180,33 +179,33 @@
 ////        }
 //    }
 //
-//    void printList() {
-//        if (head == null) {
-//            System.out.println("list is empty");
-//            return;
-//        }
-//        Node last = head;
-//        while (last != null) {
-//            System.out.print(last.data + " ");
-//            last = last.next;
-//        }
-//    }
+    void printList() {
+        if (head == null) {
+            System.out.println("list is empty");
+            return;
+        }
+        Node last = head;
+        while (last != null) {
+            System.out.print(last.data + " ");
+            last = last.next;
+        }
+    }
 //
-//    public static void main(String[] args) {
-//        linklists list = new linklists();
-//        list.addFirst(5);
-//        list.addFirst(6);
-//        list.addFirst(2);
-//        list.addFirst(7);
-////        list.addLast(1);
-////        list.addLast(8);
+    public static void main(String[] args) {
+        linklists list = new linklists();
+        list.addFirst(5);
+        list.addFirst(6);
+        list.addFirst(2);
+        list.addFirst(7);
+//        list.addLast(1);
+//        list.addLast(8);
 ////        list.delFirst(2);
-////        list.delLast(8);
+        list.delLast();
 ////        list.delAtpos(3);
 ////        list.search(2);
 ////        list.reverse();
 ////        list.sortedLinkList();
-//          list.printList();
+          list.printList();
 ////          list.sortedLinkList();
 ////          list.reverse();
 ////          list.printList();
@@ -214,7 +213,7 @@
 ////        list.middleLinklist();
 ////        list.lengthLinkist();
 //
-//    }
-//}
+    }
+}
 //
 //
