@@ -4,7 +4,7 @@ public class BinarySerch
     static void binarySearch(int arr[],int key)
     {
         int s=0,mid;
-        int e=arr.length-1;
+        int e = arr.length - 1;
         int flag=0;
         while(s<=e)
         {
