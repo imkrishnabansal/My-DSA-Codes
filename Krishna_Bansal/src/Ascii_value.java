@@ -2,7 +2,7 @@ package Krishna_Bansal.src;
 import java.util.*;
 public class Ascii_value {
     public static void main(String[] args) {
-        String s = "hello";
+        String s = "krishna";
        int result =  calculateScore(s);
         System.out.println(result);
     }
