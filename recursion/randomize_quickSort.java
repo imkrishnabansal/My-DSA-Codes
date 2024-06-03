@@ -1,6 +1,8 @@
 package recursion;
 
-public class QUICK_SORT {
+import java.util.Random;
+
+public class randomize_quickSort {
     public static void main(String[] args) {
         int arr[] = {3, 89, 2, 5, 6, 8, 4};
         sort(arr, 0, arr.length-1);
@@ -10,7 +12,7 @@ public class QUICK_SORT {
         System.out.println();
     }
 
-        public static void sort(int[]arr,int si,int ei){
+    public static void sort(int[]arr,int si,int ei){
         if(si>=ei){
             return;
         }
@@ -19,6 +21,12 @@ public class QUICK_SORT {
         sort(arr,idx+1,ei);
     }
     public static int partitioning(int[]arr ,int si, int ei){
+        Random rn = new Random();
+        int p = rn.nextInt(ei-si+1)+si;
+        int temp1 = arr[p];
+        arr[p] = arr[ei];
+        arr[ei] = temp1;
+
         int item = arr[ei];
         int idx = si;
         for(int i =si;i<ei;i++){
@@ -35,4 +43,3 @@ public class QUICK_SORT {
         return idx;
     }
 }
-//time complexity  in avg and best case is O(n log n) and worst case O(n^2)

@@ -52,5 +52,5 @@ public class merge_sort {
         }
         return ans;
     }
-
 }
+//time complexity is O(n(log n))in avg,best and worst case
