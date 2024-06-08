@@ -13,7 +13,7 @@ public class combination_sum {
     }
     public static void combination(int[] coin, int amount, List<Integer> ll,int idx ,List<List<Integer>> ans){
         if(amount==0){
-            ans.add(new ArrayList<>());
+            ans.add(new ArrayList<>(ll));
             return;
         }
         for(int i= idx;i<coin.length;i++){
