@@ -4,7 +4,7 @@ public class BubbleSort {
         Scanner sc = new Scanner(System.in);
         int temp = 0;
         int arr[] = {78,67,5,3,2,12};
-        for(int i =0;i<arr.length-1;i++){
+        for(int i =0;i<arr.length;i++){
             for(int j= i+1;j<arr.length;j++) {
                 if (arr[i] > arr[j]) {
                     temp = arr[i];
