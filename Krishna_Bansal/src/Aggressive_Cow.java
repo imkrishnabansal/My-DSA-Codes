@@ -3,14 +3,18 @@ import java.util.*;
 public class Aggressive_Cow {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n =sc.nextInt();
-        int c =sc.nextInt();
-        int[]stall = new int[n];
-        for(int i =0;i<stall.length;i++){
-            stall[i] = sc.nextInt();
+        int  t =sc.nextInt();
+        while(t>0) {
+            int n = sc.nextInt();
+            int c = sc.nextInt();
+            int[] stall = new int[n];
+            for (int i = 0; i < stall.length; i++) {
+                stall[i] = sc.nextInt();
+            }
+            Arrays.sort(stall);
+            System.out.println(largest_min_dist(stall, c));
+            t--;
         }
-        Arrays.sort(stall);
-        System.out.println(largest_min_dist(stall,c));
     }
     public static int largest_min_dist(int[]stall,int c){
         int low =0;
@@ -19,7 +23,7 @@ public class Aggressive_Cow {
         while(low<=hi){
             int mid = (low+hi)/2;
             if(isitpossible(stall,c,mid)==true){
-                ans= mid;c
+                ans= mid;
                 low = mid+1;
             }else{
                 hi = mid-1;
@@ -42,3 +46,4 @@ public class Aggressive_Cow {
         return false;
     }
 }
+//nlogn
