@@ -22,7 +22,7 @@ public class HeadTail_2 {
 //    public static int CountCoinToss_2(int n,String ans){
 //        if(n==0){
 //            System.out.println(ans);
-////            count++;
+//            count++;
 //            return 1;
 //        }
 //        int a1;
@@ -31,6 +31,6 @@ public class HeadTail_2 {
 //           a1= CountCoinToss_2(n - 1, ans + "H");
 //        }
 //       a2 = CountCoinToss_2(n-1,ans + "T");
-////        return a1+a2;
+//        return a1+a2;
 //    }
 }
